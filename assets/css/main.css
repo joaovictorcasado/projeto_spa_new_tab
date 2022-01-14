@@ -1,0 +1,154 @@
+/* MAIN CSS DESKTOP*/
+
+.sections {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+  align-items: baseline;
+}
+
+.transaction {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  border-radius: 4px;
+  border: solid #979797 1px;
+  width: 30%;
+  gap: 20px;
+}
+
+.transaction h1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.field {
+    width: 100%;
+}
+
+.field h4 {
+  font-size: 14px;
+  color: #333333;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.title-value, .title-name{
+  padding-top: 20px;
+}
+
+
+select{
+  color: #888;
+}
+
+
+.field select {
+  margin: 0;
+  width: 100%;
+  cursor: pointer;
+  border: solid #979797 1px;
+  height: 32px;
+  border-radius: 4px;
+  padding-left: 6px;
+}
+
+
+
+.field input {
+  margin: 0;
+  width: 98%;
+  cursor: pointer;
+  border: solid #979797 1px;
+  height: 32px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 300;
+  color: #888888;
+  padding-left: 6px;
+  padding-right: 0;
+}
+
+.button-add {
+  margin: 0;
+  border: 0;
+  width: 100%;
+  background-color: #333333;
+  height: 32px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.div-button {
+  width: 100%;
+}
+
+.extract{
+  width: 50%;
+}
+
+.extract-title{
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+}
+
+.mercadoria-titulo{
+  font-size: 14px;
+  font-weight: 700;
+
+}
+
+.valor-titulo{
+
+}
+
+table {
+  border-spacing: 0;
+  width: 100%;
+}
+
+td {
+  padding-bottom: 8px;
+  border-bottom: solid #979797 2px;
+  width: 50%;
+  font-size: 14px;
+  line-height: 25px;
+  color: #000000;
+
+}
+h2 {
+     text-align: center;
+ }
+
+table .wide-b {
+  text-align: end;
+}
+
+.remove-line .wide-a {
+  text-align: end;
+}
+
+.remove-line {
+  border: none;
+}
+
+.sinal-positivo::before {
+  content: "+ ";
+  padding-right: 10px;
+}
+.sinal-negativo::before{
+  content: "- ";
+  padding-right: 10px;
+}
+
+.double-line{
+ padding-bottom:1.5px ;
+}

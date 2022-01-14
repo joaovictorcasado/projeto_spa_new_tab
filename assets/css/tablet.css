@@ -1,0 +1,194 @@
+@media (max-width: 1112px)
+{
+
+    /* TABLET LANDSCAPE HEADER*/
+
+
+    .navbar{
+        justify-content: space-around;
+    }
+
+    .logo-title {
+        width: 60%;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+/* TABLET PORTRAIT HEADER*/
+.navbar {
+    justify-content: space-between;
+}
+
+
+.logo-title{
+    width: 100%;
+    padding-left:20px ;
+}
+
+.nav-title{
+    width: 100%;
+    text-align: center;
+}
+
+/*MENU HAMBURGUER TABLET*/
+
+.div-li{  /*SEPARADOR DOS LINKS*/
+
+    display: none;
+}
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 15%;  
+}
+
+
+    
+    
+    ul{
+        margin: 0;
+        background: #333;
+    }
+    ul li{
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        text-align: right;
+    }  
+
+    li a{
+        margin-right:20px ;
+    }
+    
+    a {
+        color: #fff;
+    }
+    
+    a:hover{
+        color: #333
+        
+        
+    }
+
+    
+    .menu .hamburguer {
+        display: block;
+        padding: 15px;
+    }
+
+    .menu ul.menu-content li{
+        padding:10px;
+    }
+
+.menu ul.menu-content li:hover{
+    background-color: #c4c4c4;
+    color: white;
+    margin: 0px;
+}
+
+
+ .menu-content{
+    
+    display: none;
+}
+
+.menu:hover .menu-content{
+    
+    display: block;
+    padding-left: 0;
+}
+
+ 
+.menu .hamburguer::after{
+    content: '☰';
+}
+
+
+.menu:hover .hamburguer::after{
+    content: 'X';
+}
+
+
+.menu:hover{
+    align-items: flex-start;
+    position: fixed;
+    right: 0;
+    top:0;
+    color: #fff;
+    background-color: #333;
+    height: 100%;
+    width: 35%; }
+
+
+/* MAIN TABLET PORTRAIT*/
+
+.sections {
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.transaction{
+    width: 90%;
+}
+.extract{
+    padding: 2px;
+    width: 94%;
+}
+
+.transaction{
+    display: block;
+    flex-direction: row;
+}
+
+.field {
+    display: flex;
+}
+
+.title-transaction{
+    text-align: center;
+    padding-bottom: 21px;
+}
+
+.div-select{
+    width: 25%;
+}
+
+.type-transaction{
+    padding-top:20px ;
+    white-space: nowrap;
+}
+
+.div-name{
+    width: 60%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.div-valor{
+    width: 35%;
+}
+
+.div-button{
+    text-align: end;
+
+}
+#inpt-select{
+    height: 36px;
+   
+}
+
+ .inpt-name, .inpt-valor{
+width: 100%;
+}
+
+
+
+.button-add{
+    margin-top:20px;
+    width: 35%;
+}
+}

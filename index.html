@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto - Individual SPA</title>
+    <link
+    href="http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext"
+    rel="stylesheet"
+    type="text/css"
+    />
+    <link rel="stylesheet" href="./assets/css/header.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
+    <link rel="stylesheet" href="./assets/css/footer.css">
+    <link rel="stylesheet" href="./assets/css/tablet.css">
+    <link rel="stylesheet" href="./assets/css/smartphone.css">
+   
+  </head>
+
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo-title">
+          <img
+            class="logo-png"
+            src="./assets/img/Ellipse 13.png"
+            alt="logo-png"
+          />
+          <div class="nav-title"><h4>Controle Financeiro</h4></div>
+        </div>
+        <div class="menu">
+          <div class="hamburguer"></div>
+          <ul class="menu-content">
+            <li><a href="#">Cadastro de Transação</a></li>
+            <li class="div-li">|</li>
+            <li><a href="#"> Limpar Dados</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="sections">
+        
+        <div class="transaction">
+          <h1 class="title-transaction">Nova transação</h1>
+          <div class="field">
+          <div class="div-select" >
+            <h4 class="type-transaction">Tipo de transação</h4>
+            <select id="inpt-select" name="field" id="typeOfTransaction">
+              <option value="card">Cartão</option>
+              <option value="pix">Pix</option>
+              <option value="bank">Bancária</option>
+            </select>
+          </div>
+          <div class="div-name">
+          <h4 class="title-name">Nome da mercadoria</h4>
+            <input id="inpt-name"type="text" placeholder="Nome" />
+          </div>
+          <div class="div-valor">
+            <h4 class="title-value">Valor</h4>
+            <input id="inpt-valor" type="text" placeholder="R$ 0,00" />
+          </div>
+        </div>
+        <div class="div-button">
+          <button class="button-add" type="button">Adicionar transação</button> 
+        </div>
+        </div>
+        
+        <div class="extract">
+          <h2 class="extract-title">Extrato de Transações</h2>
+
+          <table>
+            <tr>
+              <td  style="font-weight: 700; padding-left: 22px; padding-top:2px"> Mercadoria</td>
+              <td class="wide-b valor-titulo" style="font-weight: 700;">Valor</td>
+            </tr>
+            <tr>
+              <td class="wide-a sinal-positivo">Lorem ipsum dolor sit amet consectetur</td>
+              <td class="wide-b">R$ 12.999,99</td>
+            </tr>
+
+            <tr >
+              <td class="sinal-negativo">Quis nostrud exercitation</td>
+              <td class="wide-b">R$ 99,99</td>
+            </tr>
+            <tr >
+              <td class="wide-a sinal-positivo">Lorem ipsum</td>
+              <td class="wide-b">R$ 9,99</td>
+              <tr> <td class="double-line"></td> <td class="double-line"></td></tr>  
+              
+            </tr>
+            <tr>
+              <td class="remove-line" style="font-weight: 700; padding-left: 22px;">Total</td>
+              <td class="remove-line wide-b" style="font-weight: 700;">R$ 12.909,99</td>
+
+              
+              
+            </tr>
+           
+          </table>
+        </div>
+      </div>
+    </main>
+
+    <footer></footer>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+@media (max-width:620px)
+{
+
+    /* HEADER SMARTPHONE */
+
+ul{
+    width: 100%;
+}
+
+a{
+    padding-right:20px ;
+}
+
+
+    /* MAIN SMARTPHONE */
+
+    body{
+        overflow-y: scroll;
+    }
+
+    .menu:hover{
+        width: 85%;
+    }
+
+    .transaction{
+        border: none;
+    }
+    .title-transaction {
+        display: none;
+    }
+
+    .field {
+        display: flex;
+        flex-direction: column;
+    }
+    .div-select, .div-name, .div-valor, .button-add {
+     width: 100%;
+     padding: 0px;
+    }
+    
+
+    
+
+    .button-add{
+        margin-bottom: 27px;
+    }
+
+    .extract{
+        border-top:solid #979797 1px;
+    }
+}
