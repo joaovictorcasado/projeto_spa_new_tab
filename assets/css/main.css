@@ -106,18 +106,16 @@ select{
 
 }
 
-.valor-titulo{
 
-}
 
 table {
   border-spacing: 0;
   width: 100%;
 }
-
+/* td {}
+padding-bottom: 8px; */
 td {
-  padding-bottom: 8px;
-  border-bottom: solid #979797 2px;
+  border-bottom: solid #979797 1px;
   width: 50%;
   font-size: 14px;
   line-height: 25px;
