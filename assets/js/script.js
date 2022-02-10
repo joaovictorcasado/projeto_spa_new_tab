@@ -1,6 +1,8 @@
-
 let objStorage = [];
-
+let nomeMercadoriaDOM = document.getElementById("inpt-name").value;
+let valorMercadoriaDOM = document.getElementById("inpt-valor").value;
+let select = document.getElementById("inpt-select");
+let tipoMercadoriaDOM = select.options[select.selectedIndex].value;
 
 
 if (localStorage.getItem("transactions")) {
@@ -8,15 +10,23 @@ if (localStorage.getItem("transactions")) {
 }
 
 function removeTable() {
-  if (window.confirm("Deseja remover todas as transações?")) {
+  if (objStorage.length >0 && window.confirm ('Deseja remover todas as informações?')) {
     for (element of document.querySelectorAll(".transacao-mercadoria")) {
       element.remove();
       localStorage.clear();
       objStorage = [];
       drawTable()
-    }
+    } 
+  
+  } else if (objStorage <=0){
+    alert('Não foi possivel remover a transação, pois não há transacão cadastrada!!')
   }
+  
+ 
 }
+
+  
+
 
 // Função que adiciona os itens na tabela..
 function drawTable() {
@@ -24,18 +34,18 @@ function drawTable() {
   let total = 0;
 
   for (element of document.querySelectorAll(".transacao-mercadoria")) {
-     element.remove();
-   }
+    element.remove();
+  }
 
   //  removeElem = [...document.querySelectorAll(".transacao-mercadoria")];
   //  removeElem.forEach((element) => {
   //   element.remove();
   //  });
 
-   if (objStorage.length == 0 ){
-    selectTable.innerHTML +=`<tr class="transacao-mercadoria">  
+  if (objStorage.length == 0) {
+    selectTable.innerHTML += `<tr class="transacao-mercadoria">  
     <td style="border:none; text-align:center; width:100%; padding-left:60px;"> Nenhuma Transação cadastrada </td> </tr>`
-   }
+  }
 
   for (item in objStorage) {
 
@@ -55,8 +65,8 @@ function drawTable() {
 
   }
 
-   if (objStorage.length > 0) {
-     selectTable.innerHTML +=  ` 
+  if (objStorage.length > 0) {
+    selectTable.innerHTML += ` 
 
      <tr class="transacao-mercadoria"> <td> </td> <td> </td>  </tr>
      
@@ -67,11 +77,11 @@ function drawTable() {
 
 
    `
-        
-    
-      
 
-   }
+
+
+
+  }
   // Other form 
   //  removeElem = [...document.querySelectorAll(".transacao-mercadoria")];
   //  removeElem.forEach((element) => {
@@ -83,10 +93,7 @@ function drawTable() {
 
 
 function lertabela() {
-  let nomeMercadoriaDOM = document.getElementById("inpt-name").value;
-  let valorMercadoriaDOM = document.getElementById("inpt-valor").value;
-  let select = document.getElementById("inpt-select");
-  let tipoMercadoriaDOM = select.options[select.selectedIndex].value;
+
 
   objStorage.push({
     nomeMercadoria: nomeMercadoriaDOM,
@@ -99,16 +106,3 @@ function lertabela() {
 
 
 drawTable();
-// function drawTable() {
-//   let tabela = [];
-
-//   for (item in tabela) {
-//     document.querySelector("#trans tbody").innerHTML += `<tr>
-//     <td> Lorem ipsum dolor sit amet consectetur</td>
-//     <td class="wide-b">R$ 12.999,99</td>
-//    </tr>
-//   <tr> `;
-//   }
-// }
-
-// drawTable();
