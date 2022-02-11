@@ -17,6 +17,8 @@ if (localStorage.getItem("transactions")) {
 //   }
 // }
 
+
+
 function removeTable() {
   if (objStorage.length > 0 && window.confirm('Deseja remover todas as informações?')) {
     for (element of document.querySelectorAll(".transacao-mercadoria")) {
@@ -33,6 +35,12 @@ function removeTable() {
 
 }
 
+var currencyFormat = new Intl.NumberFormat( 
+  'pt-br', { 
+  style: 'currency', 
+  currency: 'BRL', 
+  minimumFractionDigits: 2,
+});
 // Função que adiciona os itens na tabela..
 function drawTable() {
   let selectTable = document.querySelector("#trans tbody");
@@ -55,14 +63,14 @@ function drawTable() {
   for (item in objStorage) {
 
     if (objStorage[item].tipoMercadoria == 'Compra') {
-      total -= objStorage[item].valorMercadoria
+      total -= Number(objStorage[item].valorMercadoria)
     } else {
-      total += objStorage[item].valorMercadoria
+      total += Number(objStorage[item].valorMercadoria)
     }
     console.log(item);
     selectTable.innerHTML += `<tr class="transacao-mercadoria">
     <td style= "padding-left: 22px;"> ${objStorage[item].tipoMercadoria == "Compra" ? '-' : '+'} ${objStorage[item].nomeMercadoria}</td>
-    <td class="wide-b"> ${objStorage[item].valorMercadoria}</td>
+    <td class="wide-b"> ${currencyFormat.format(objStorage[item].valorMercadoria)}</td>
      </tr>
       `;
 
@@ -73,9 +81,9 @@ function drawTable() {
    if (objStorage.length > 0) {
      selectTable.innerHTML +=  ` 
      <tr class="transacao-mercadoria"> <td> </td> <td> </td>  </tr>
-     
      <tr><td class="transacao-mercadoria" style="padding-left:35px; border:none;"><strong>Total</strong></td>
-     <td class="transacao-mercadoria" style="text-align:right; border:none"><strong>100000<strong></td> </tr>
+     <td class="transacao-mercadoria"style= "border:none;">${currencyFormat.format(total)}</td>
+     </tr> 
      <tr class="transacao-mercadoria">  <td style="width:100%; border:none; text-align:right;position:relative; left:50px; bottom:10px"> ${(objStorage[item].tipoMercadoria == 'Compra')? '[Despesa]' : '[Lucro]' }  </td> </tr>
    `
 
@@ -94,10 +102,14 @@ function drawTable() {
 
 
 function lertabela() {
+
   let nomeMercadoriaDOM = document.getElementById("inpt-name").value;
   let valorMercadoriaDOM = document.getElementById("inpt-valor").value;
   let select = document.getElementById("inpt-select");
   let tipoMercadoriaDOM = select.options[select.selectedIndex].value;
+
+  
+
 
   objStorage.push({
     nomeMercadoria: nomeMercadoriaDOM,
