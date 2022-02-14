@@ -118,13 +118,16 @@ function mask() {
   }
 
   elemento.value = valor;
+  if (valor == "NaN") elemento.value = "";
 }
 
-function lertabela() {
-  let nomeMercadoriaDOM = document.getElementById("inpt-name").value;
-  let valorMercadoriaDOM = document.getElementById("inpt-valor").value;
-  let select = document.getElementById("inpt-select");
-  let tipoMercadoriaDOM = select.options[select.selectedIndex].value;
+function lertabela(e) {
+  e.preventDefault();
+
+  let nomeMercadoriaDOM = e.target.elements["inpt-name"].value;
+  let valorMercadoriaDOM = e.target.elements["inpt-valor"].value;
+  let select = e.target.elements["inpt-select"];
+  let tipoMercadoriaDOM = e.target.elements[select.selectedIndex].value;
 
   objStorage.push({
     nomeMercadoria: nomeMercadoriaDOM,

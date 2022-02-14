@@ -36,14 +36,13 @@
   </header>
 
   <main>
-    <form class="sections">
+    <form class="sections" onsubmit="lertabela(event)">
       <div class="transaction">
         <h1 class="title-transaction">Nova transação</h1>
         <div class="field">
           <div class="div-select">
             <h4 class="type-transaction">Tipo de transação</h4>
             <select required id="inpt-select" name="field" id="typeOfTransaction">
-              <option value="" disabled selected>Selecione uma opção</option>
               <option value="Compra">Compra</option>
               <option value="Venda">Venda</option>
             </select>
@@ -58,7 +57,7 @@
           </div>
         </div>
         <div class="div-button">
-          <input   type="submit" class="button-add"value="Adicionar transação"  onclick="lertabela()"/>
+          <input   type="submit" class="button-add"value="Adicionar transação" />
           
         </div>
       </div>
