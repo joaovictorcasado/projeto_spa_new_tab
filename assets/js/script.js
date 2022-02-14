@@ -4,6 +4,14 @@ if (localStorage.getItem("transactions")) {
   objStorage = JSON.parse(localStorage.getItem("transactions"));
 }
 
+function openSide() {
+  document.getElementsByClassName("menu")[0].classList.add("Open");
+}
+
+function closeSide() {
+  document.getElementsByClassName("menu")[0].classList.remove("Open");
+}
+
 // function removeTable() {
 //   if (window.confirm("Deseja remover todas as transações?")) {
 //     for (element of document.querySelectorAll(".transacao-mercadoria")) {

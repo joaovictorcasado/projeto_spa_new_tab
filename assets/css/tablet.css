@@ -35,6 +35,7 @@
 
 /*MENU HAMBURGUER TABLET*/
 
+
 .div-li{  /*SEPARADOR DOS LINKS*/
 
     display: none;
@@ -75,7 +76,7 @@
     }
 
     
-    .menu .hamburguer {
+     .hamburguer {
         display: block;
         padding: 15px;
     }
@@ -103,17 +104,8 @@
 }
 
  
-.menu .hamburguer::after{
-    content: '☰';
-}
 
-
-.menu:hover .hamburguer::after{
-    content: 'X';
-}
-
-
-.menu:hover{
+.Open{
     align-items: flex-start;
     position: fixed;
     right: 0;
