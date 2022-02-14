@@ -1,10 +1,9 @@
-@media (max-width: 1112px)
-{
+@media (max-width: 1112px) {
 
     /* TABLET LANDSCAPE HEADER*/
 
 
-    .navbar{
+    .navbar {
         justify-content: space-around;
     }
 
@@ -17,170 +16,181 @@
 
 @media (max-width: 768px) {
 
-/* TABLET PORTRAIT HEADER*/
-.navbar {
-    justify-content: space-between;
-}
-
-
-.logo-title{
-    width: 100%;
-    padding-left:20px ;
-}
-
-.nav-title{
-    width: 100%;
-    text-align: center;
-}
-
-/*MENU HAMBURGUER TABLET*/
-
-
-.div-li{  /*SEPARADOR DOS LINKS*/
-
-    display: none;
-}
-.menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 15%;  
-}
-
-
-    
-    
-    ul{
-        margin: 0;
-        background: #333;
+    /* TABLET PORTRAIT HEADER*/
+    .navbar {
+        justify-content: space-between;
     }
-    ul li{
-        margin: 0;
-        padding: 0;
+
+
+    .logo-title {
         width: 100%;
-        text-align: right;
-    }  
+        padding-left: 20px;
+    }
 
-    li a{
-        margin-right:20px ;
+    .nav-title {
+        width: 100%;
+        text-align: center;
+    }
+
+    
+    
+    .div-li {
+        display: none;
     }
     
+    /*MENU HAMBURGUER TABLET*/
+
+    .hamburguer {
+        display: block;
+        cursor: pointer;
+        margin-right: 20px;
+    }
+
+    .menu {
+        display: none;
+        padding: 0;
+        width: 252px;
+    }
+
+    .div_close {
+        display: block;
+    }
+
+    .div_close {
+        width: 100%;
+        display: flex;
+        justify-content: left;
+
+    }
+
+    .div_close img {
+        padding-left: 20px;
+        padding-bottom: 26px;
+        cursor: pointer;
+        background-color: #333333;
+    }
+
+    .Open {
+        position: fixed;
+        height: 100vh;
+        background: #333333;
+        top: 0;
+        right: 0;
+        overflow-x: hidden;
+        transition: 0.5s;
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
+        justify-content: flex-start;
+    }
+
+
+    .menu-content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        background: #333333;
+        padding: 0;
+
+    }
+
+    .menu-content .div-li {
+        display: none;
+    }
+
+    .menu-content li {
+        padding: 0;
+        display: flex;
+        width: 100%;
+        justify-content: right;
+        padding-right: 18px;
+        padding-top: 7px;
+        padding-bottom: 7px;
+        margin-bottom: 20px;
+        align-items: center;
+    }
+
+    .menu-content li:hover {
+        background: #C4C4C4;
+        color: black
+    }
+
+
+    /* MAIN TABLET PORTRAIT*/
+
+    .sections {
+        flex-direction: column;
+        margin-left: 30px;
+    }
+
+    .transaction {
+        width: 90%;
+    }
+
+    .extract {
+        padding: 2px;
+        width: 94%;
+    }
+
+    .transaction {
+        display: block;
+        flex-direction: row;
+    }
+
+    .field {
+        display: flex;
+    }
+
+    .title-transaction {
+        text-align: center;
+        padding-bottom: 21px;
+    }
+
+    .div-select {
+        width: 25%;
+    }
+
+    .type-transaction {
+        padding-top: 20px;
+        white-space: nowrap;
+    }
+
+    .div-name {
+        width: 60%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .div-valor {
+        width: 35%;
+    }
+
+    .div-button {
+        text-align: end;
+
+    }
+
+    #inpt-select {
+        height: 36px;
+
+    }
+
+    .inpt-name,
+    .inpt-valor {
+        width: 100%;
+    }
+
     a {
         color: #fff;
     }
-    
+
     a:hover{
-        color: #333
-        
-        
+        color: #333333;
     }
 
-    
-     .hamburguer {
-        display: block;
-        padding: 15px;
+    .button-add {
+        margin-top: 20px;
+        width: 35%;
     }
-
-    .menu ul.menu-content li{
-        padding:10px;
-    }
-
-.menu ul.menu-content li:hover{
-    background-color: #c4c4c4;
-    color: white;
-    margin: 0px;
-}
-
-
- .menu-content{
-    
-    display: none;
-}
-
-.menu:hover .menu-content{
-    
-    display: block;
-    padding-left: 0;
-}
-
- 
-
-.Open{
-    align-items: flex-start;
-    position: fixed;
-    right: 0;
-    top:0;
-    color: #fff;
-    background-color: #333;
-    height: 100%;
-    width: 35%; }
-
-
-/* MAIN TABLET PORTRAIT*/
-
-.sections {
-    flex-direction: column;
-    margin-left: 30px;
-}
-
-.transaction{
-    width: 90%;
-}
-.extract{
-    padding: 2px;
-    width: 94%;
-}
-
-.transaction{
-    display: block;
-    flex-direction: row;
-}
-
-.field {
-    display: flex;
-}
-
-.title-transaction{
-    text-align: center;
-    padding-bottom: 21px;
-}
-
-.div-select{
-    width: 25%;
-}
-
-.type-transaction{
-    padding-top:20px ;
-    white-space: nowrap;
-}
-
-.div-name{
-    width: 60%;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-
-.div-valor{
-    width: 35%;
-}
-
-.div-button{
-    text-align: end;
-
-}
-#inpt-select{
-    height: 36px;
-   
-}
-
- .inpt-name, .inpt-valor{
-width: 100%;
-}
-
-
-
-.button-add{
-    margin-top:20px;
-    width: 35%;
-}
 }

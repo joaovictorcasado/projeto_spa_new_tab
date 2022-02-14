@@ -1,30 +1,28 @@
-@media (max-width:620px)
-{
+@media (max-width:620px) {
 
     /* HEADER SMARTPHONE */
 
-ul{
-    width: 100%;
-}
+    ul {
+        width: 100%;
+    }
 
-a{
-    padding-right:20px ;
-}
+    a {
+        padding-right: 20px;
+    }
 
 
     /* MAIN SMARTPHONE */
 
-    body{
+    body {
         overflow-y: scroll;
     }
 
-    .menu:hover{
-        width: 85%;
-    }
 
-    .transaction{
+
+    .transaction {
         border: none;
     }
+
     .title-transaction {
         display: none;
     }
@@ -33,19 +31,23 @@ a{
         display: flex;
         flex-direction: column;
     }
-    .div-select, .div-name, .div-valor, .button-add {
-     width: 100%;
-     padding: 0px;
+
+    .div-select,
+    .div-name,
+    .div-valor,
+    .button-add {
+        width: 100%;
+        padding: 0px;
     }
-    
 
-    
 
-    .button-add{
+
+
+    .button-add {
         margin-bottom: 27px;
     }
 
-    .extract{
-        border-top:solid #979797 1px;
+    .extract {
+        border-top: solid #979797 1px;
     }
 }

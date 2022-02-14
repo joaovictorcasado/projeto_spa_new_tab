@@ -16,7 +16,7 @@ body {
  
     display: flex;
     align-items: center;
-    
+    margin-left: 10px;
 }
 
 .logo-png{
@@ -35,10 +35,12 @@ body {
 
 
  .menu-content{
-    display:block;
-    font-size: 16px;
-    font-weight: 600;
-    text-align: center;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: max-content;
+    margin-right: 10px;
 }
 
 .hamburguer{
@@ -47,18 +49,19 @@ body {
 }
 
 ul {
+    display: flex;
+    align-items: center;
     background-color: #fff;
     list-style: none;
-    padding-top: 14px;
-    padding-bottom: 14px;
-    padding-left: 10px;
-    padding-right: 10px;
+    height: 40px;
     border-radius: 2px;
 }
 
 .div-li{
     color: #979797;
     width: 20px;
+    display:flex; 
+    justify-content: center;
 }
 
 li {
@@ -69,6 +72,7 @@ li {
 a {
     text-decoration: none;
     color: #333333;
+    font-weight: 600;
 }
 
 a:hover{
@@ -76,4 +80,10 @@ a:hover{
 }
 a:active{
     color: blue;
+}
+
+
+/* fecha o menu */
+.div_close {
+    display: none;
 }

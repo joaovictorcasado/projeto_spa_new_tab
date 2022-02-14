@@ -55,11 +55,6 @@ function drawTable() {
     element.remove();
   }
 
-  //  removeElem = [...document.querySelectorAll(".transacao-mercadoria")];
-  //  removeElem.forEach((element) => {
-  //   element.remove();
-  //  });
-
   if (objStorage.length == 0) {
     selectTable.innerHTML += `<tr class="transacao-mercadoria">  
     <td style="border:none; text-align:center; width:100%; padding-left:60px;"> Nenhuma Transação cadastrada </td> </tr>`;
@@ -102,14 +97,6 @@ function drawTable() {
      }  </td> </tr>
    `;
   }
-
-  // Other form
-  //  removeElem = [...document.querySelectorAll(".transacao-mercadoria")];
-  //  removeElem.forEach((element) => {
-  //    element.remove();
-  //  });
-
-  // Desenha a tabela
 }
 
 function mask() {
@@ -147,16 +134,3 @@ function lertabela(e) {
 }
 
 drawTable();
-// function drawTable() {
-//   let tabela = [];
-
-//   for (item in tabela) {
-//     document.querySelector("#trans tbody").innerHTML += `<tr>
-//     <td> Lorem ipsum dolor sit amet consectetur</td>
-//     <td class="wide-b">R$ 12.999,99</td>
-//    </tr>
-//   <tr> `;
-//   }
-// }
-
-// drawTable();
