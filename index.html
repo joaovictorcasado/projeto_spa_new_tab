@@ -54,11 +54,12 @@
           </div>
           <div class="div-valor">
             <h4 class="title-value">Valor</h4>
-            <input required id="inpt-valor" type="text" placeholder="R$ 0,00" onkeydown="mask()" />
+            <input  required id="inpt-valor" type="text" placeholder="R$ 0,00"  onkeyup="mask()"/>
           </div>
         </div>
         <div class="div-button">
-          <input class="button-add" type="button" value="Adicionar transação"  onclick="lertabela()" />
+          <input   type="submit" class="button-add"value="Adicionar transação"  onclick="lertabela()"/>
+          
         </div>
       </div>
 
@@ -80,5 +81,6 @@
   <footer></footer>
 </body>
 <script src="assets/js/script.js"></script>
+
 
 </html>
