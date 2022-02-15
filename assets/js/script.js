@@ -67,7 +67,7 @@ function drawTable() {
     <td style= "padding-left: 22px;"> ${
       objStorage[item].tipoMercadoria == "Compra" ? "-" : "+"
     } &nbsp;  ${objStorage[item].nomeMercadoria}</td>
-    <td class="wide-b"> 
+    <td class="transacao-mercadoria" style="text-align:start;"> 
     ${currencyFormat.format(
       valorMercadoria.toString().replace(/([0-9]{2})$/g, ".$1")
     )}</td>
@@ -91,22 +91,53 @@ function drawTable() {
   }
 }
 
-function mask() {
-  var elemento = document.getElementById("inpt-valor");
-  var valor = elemento.value;
+const letterPattern = /[^0-9]/;
 
-  valor = valor + "";
-  valor = parseInt(valor.replace(/[\D]+/g, ""));
-  valor = valor + "";
-  valor = valor.replace(/([0-9]{2})$/g, ",$1");
-
-  if (valor.length > 6) {
-    valor = valor.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2");
+function mask(e) {
+  if (letterPattern.test(e.key)) {
+    console.log(e.key);
+    e.preventDefault();
+    return;
   }
 
-  elemento.value = valor;
-  if (valor == "NaN") elemento.value = "";
+  if (!e.target.value) return;
+
+  valor = e.target.value.toString();
+  valor = valor.replace(/[\D]+/g, "");
+  valor = valor.replace(/([0-9]{1})$/g, ",$1");
+
+  if (valor.length >= 6) {
+    while (/([0-9]{4})[,|\.]/g.test(valor)) {
+      valor = valor.replace(/([0-9]{1})$/g, ",$1");
+      valor = valor.replace(/([0-9]{3})[,|\.]/g, ".$1");
+    }
+  }
+  e.target.value = valor;
 }
+
+// function mask() {
+//   var elemento = document.getElementById("inpt-valor");
+//   var valor = elemento.value;
+
+//   valor = valor + "";
+//   valor = parseInt(valor.replace(/[\D]+/g, ""));
+//   valor = valor + "";
+//   valor = valor.replace(/([0-9]{2})$/g, ",$1");
+
+//   if (valor.length >= 6) {
+//     while (/([0-9]{4})[,|\.]/g.test(valor)) {
+//       valor = valor.replace(/([0-9]{1})$/g, ",$1");
+//       valor = valor.replace(/([0-9]{3})[,|\.]/g, ".$1");
+//     }
+//   }
+// }
+// //   if (valor.length > 6) {
+// //     valor = valor.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2");
+// //   }
+
+// //   elemento.value = valor;
+// //   if (valor == "NaN") elemento.value = "";
+// // }
 
 function lertabela(e) {
   e.preventDefault();

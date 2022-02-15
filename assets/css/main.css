@@ -13,7 +13,7 @@
   align-items: center;
   padding: 15px;
   border-radius: 4px;
-  border: solid #979797 1px;
+  border: solid #979797 1px; 
   width: 30%;
   gap: 20px;
 }
@@ -51,7 +51,6 @@ select{
   margin: 0;
   width: 100%;
   cursor: pointer;
-  border: solid #979797 1px;
   height: 32px;
   border-radius: 4px;
   padding-left: 6px;
@@ -63,7 +62,6 @@ select{
   margin: 0;
   width: 98%;
   cursor: pointer;
-  border: solid #979797 1px;
   height: 32px;
   border-radius: 4px;
   font-size: 14px;
@@ -113,6 +111,9 @@ table {
   width: 100%;
 }
 
+
+
+
 td {
   border-bottom: solid #979797 1px;
   width: 100%;
@@ -125,11 +126,18 @@ h2 {
      text-align: center;
  }
  
+ #inpt-select, #inpt-name, #inpt-valor {
+  border: 2px solid;
+  border:  2px transparent #979797;
 
+ }
 
 #inpt-select:hover, #inpt-name:hover, #inpt-valor:hover {
-border: 2px solid  #979797;
+
+border: 2px solid #555555;
 }
+
+
 
 .button-add:hover {
 background-color: #555555;

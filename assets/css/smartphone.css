@@ -1,4 +1,4 @@
-@media (max-width:620px) {
+@media (max-width:411px) {
 
     /* HEADER SMARTPHONE */
 
@@ -10,6 +10,9 @@
         padding-right: 20px;
     }
 
+    .menu {
+        width: 351px;
+    }
 
     /* MAIN SMARTPHONE */
 

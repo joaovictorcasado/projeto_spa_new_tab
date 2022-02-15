@@ -25,11 +25,12 @@
           <h4>Controle Financeiro</h4>
         </div>
       </div>
-      <div class="hamburguer"> <img onclick="openSide()" width="18px" height="12px" src="./assets/img/hamburguer.svg" alt=""></div>
+      <div class="hamburguer"> <img onclick="openSide()" width="18px" height="12px" src="./assets/img/hamburguer.svg"
+          alt=""></div>
       <div class="menu">
         <ul class="menu-content">
-          <div class="div_close"> <a onclick="closeSide()"><img  src="assets/img/fecharMenu.svg" alt=""></a></div>
-          <li><a  href="#" onclick="focusSelect()">Cadastro de Transação</a></li>
+          <div class="div_close"> <a onclick="closeSide()"><img src="assets/img/fecharMenu.svg" alt=""></a></div>
+          <li><a href="#" onclick="focusSelect()">Cadastro de Transação</a></li>
           <li class="div-li">|</li>
           <li><a href="#" id="delet" onclick="removeTable()"> Limpar Dados</a></li>
 
@@ -46,7 +47,7 @@
           <div class="div-select">
             <h4 class="type-transaction">Tipo de transação</h4>
             <select required id="inpt-select" name="field" id="typeOfTransaction">
-              <option value="" disabled selected>Selecione uma transação</option>  
+              <option value="" disabled selected>Selecione</option>
               <option value="Compra">Compra</option>
               <option value="Venda">Venda</option>
             </select>
@@ -57,12 +58,14 @@
           </div>
           <div class="div-valor">
             <h4 class="title-value">Valor</h4>
-            <input  required id="inpt-valor" type="text" placeholder="R$ 0,00"  onkeyup="mask()"/>
+            <input required id="inpt-valor" type="text" placeholder="R$ 0,00" onkeypress="mask(event)"
+              oncopy="return false" oncut="return false" onpaste="return false">
+           
           </div>
         </div>
         <div class="div-button">
-          <input   type="submit" class="button-add"value="Adicionar transação" />
-          
+          <input type="submit" class="button-add" value="Adicionar transação" />
+
         </div>
       </div>
 
@@ -72,12 +75,13 @@
         <table id="trans">
           <tr>
             <td style="font-weight: 700; padding-left: 22px; padding-top:2px"> Mercadoria</td>
-            <td class="wide-b valor-titulo" style="font-weight: 700;">Valor</td>
+            <td class="wide-b valor-titulo" style="font-weight: 700; padding-right:22px; text-align: start;">Valor</td>
           </tr>
           </tr>
 
         </table>
       </div>
+
     </form>
   </main>
 
