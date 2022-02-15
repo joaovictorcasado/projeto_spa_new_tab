@@ -5,23 +5,16 @@ if (localStorage.getItem("transactions")) {
 }
 
 function openSide() {
-  document.getElementsByClassName("menu")[0].classList.add("Open");
+  document.getElementsByClassName("menu")[0].classList.toggle("Open");
 }
 
 function closeSide() {
-  document.getElementsByClassName("menu")[0].classList.remove("Open");
+  document.getElementsByClassName("menu")[0].classList.toggle("Open");
 }
 
-// function removeTable() {
-//   if (window.confirm("Deseja remover todas as transações?")) {
-//     for (element of document.querySelectorAll(".transacao-mercadoria")) {
-//       element.remove();
-//       localStorage.clear();
-//       objStorage = [];
-//       drawTable()
-//     }
-//   }
-// }
+function focusSelect() {
+  document.getElementById("inpt-select").focus();
+}
 
 function removeTable() {
   if (
@@ -36,7 +29,7 @@ function removeTable() {
     }
   } else if (objStorage <= 0) {
     alert(
-      "Não foi possivel remover a transação, pois não há transacão cadastrada!!"
+      "Não foi possivel limpar os dados. Pois não há transações no extrato.."
     );
   }
 }
@@ -73,7 +66,7 @@ function drawTable() {
     selectTable.innerHTML += `<tr class="transacao-mercadoria">
     <td style= "padding-left: 22px;"> ${
       objStorage[item].tipoMercadoria == "Compra" ? "-" : "+"
-    } ${objStorage[item].nomeMercadoria}</td>
+    } &nbsp;  ${objStorage[item].nomeMercadoria}</td>
     <td class="wide-b"> 
     ${currencyFormat.format(
       valorMercadoria.toString().replace(/([0-9]{2})$/g, ".$1")
@@ -84,17 +77,16 @@ function drawTable() {
   }
 
   if (objStorage.length > 0) {
-    //  alert(total)
     selectTable.innerHTML += ` 
      <tr class="transacao-mercadoria"> <td> </td> <td> </td>  </tr>
-     <tr><td class="transacao-mercadoria" style="padding-left:35px; border:none;"><strong>Total</strong></td>
-     <td class="transacao-mercadoria"style= "border:none;">${currencyFormat.format(
+     <tr><td class="transacao-mercadoria" style="padding-left:25px; border:none;"><strong>Total</strong></td>
+     <td class="transacao-mercadoria" style="border:none; font-weight:600; text-align:end; padding-bottom:0px ">${currencyFormat.format(
        total.toString().replace(/([0-9]{2})$/g, ".$1")
      )}</td>
      </tr> 
-     <tr class="transacao-mercadoria">  <td style="width:100%; border:none; text-align:right;position:relative; left:50px; bottom:10px"> ${
-       objStorage[item].tipoMercadoria == "Compra" ? "[Despesa]" : "[Lucro]"
-     }  </td> </tr>
+     <tr class="transacao-mercadoria"> <td style="border:none;"> </td> <td  class="transacao-mercadoria" style= "border:none; padding: 0px 0px 35px 10px; text-align:end; "> 
+     ${objStorage[item].tipoMercadoria == "Compra" ? "[Despesa]" : "[Lucro]"} 
+      </td> </tr>
    `;
   }
 }

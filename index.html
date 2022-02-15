@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projeto - Individual SPA</title>
   <link href="http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel="stylesheet" type="text/css" />
+  <link rel="shortcut icon" href="./assets/img/Ellipse 13.png" type="image/x-icon">
   <link rel="stylesheet" href="./assets/css/header.css" />
   <link rel="stylesheet" href="./assets/css/main.css" />
   <link rel="stylesheet" href="./assets/css/footer.css">
@@ -28,7 +29,7 @@
       <div class="menu">
         <ul class="menu-content">
           <div class="div_close"> <a onclick="closeSide()"><img  src="assets/img/fecharMenu.svg" alt=""></a></div>
-          <li><a href="#">Cadastro de Transação</a></li>
+          <li><a  href="#" onclick="focusSelect()">Cadastro de Transação</a></li>
           <li class="div-li">|</li>
           <li><a href="#" id="delet" onclick="removeTable()"> Limpar Dados</a></li>
 
@@ -45,6 +46,7 @@
           <div class="div-select">
             <h4 class="type-transaction">Tipo de transação</h4>
             <select required id="inpt-select" name="field" id="typeOfTransaction">
+              <option value="" disabled selected>Selecione uma transação</option>  
               <option value="Compra">Compra</option>
               <option value="Venda">Venda</option>
             </select>
