@@ -1,5 +1,8 @@
 @media (max-width: 411px) {
   /* HEADER SMARTPHONE */
+  .nav-title { 
+    width="70%"
+   }
   .Open {
     transform: translateX(-351px);
   }
