@@ -1,210 +1,216 @@
 @media (max-width: 1112px) {
+  /* TABLET LANDSCAPE HEADER*/
 
-    /* TABLET LANDSCAPE HEADER*/
+  .navbar {
+    justify-content: space-around;
+  }
 
-
-    .navbar {
-        justify-content: space-around;
-    }
-
-    .logo-title {
-        width: 60%;
-    }
-
+  .logo-title {
+    width: 60%;
+  }
 }
 
-
 @media (max-width: 768px) {
+  /* TABLET PORTRAIT HEADER*/
+  .navbar {
+    justify-content: space-between;
+  }
 
-    /* TABLET PORTRAIT HEADER*/
-    .navbar {
-        justify-content: space-between;
-    }
+  .logo-title {
+    width: 100%;
+    margin: 0px;
+    padding-left: 22px;
+  }
 
+  .nav-title {
+    width: 100%;
+    text-align: center;
+    padding: 0px;
+  }
 
-    .logo-title {
-        width: 100%;
-        margin:0px;
-        padding-left:22px;
-    }
+  .div-li {
+    display: none;
+  }
 
-    .nav-title {
-        width: 100%;
-        text-align: center;
-        padding:0px;
-    }
+  /*MENU HAMBURGUER TABLET*/
 
+  .hamburguer {
+    position: absolute;
+    display: block;
+    cursor: pointer;
+    margin-right: 20px;
+    z-index: 1;
+    right: 0;
+  }
 
+  .div_close {
+    width: 100%;
+    text-align: start;
+  }
 
-    .div-li {
-        display: none;
-    }
+  .div_close img {
+    padding-left: 20px;
+    cursor: pointer;
+    background-color: #333333;
+  }
 
-    /*MENU HAMBURGUER TABLET*/
+  .menu-content {
+    display: none;
+  }
 
-    .hamburguer {
-        display: block;
-        cursor: pointer;
-        margin-right: 20px;
-    }
+  .Open {
+    position: fixed;
+    height: 100vh;
+    background: #333333;
+    transition: 0.7s ease-out;
+    top: 0;
+    right: 0;
+    display: flex;
+    transform: translateX(-256px);
+    flex-direction: column;
+    padding-top: 20px;
+    justify-content: flex-start;
+    z-index: 2;
+    padding: 0px;
+  }
 
-     .menu {
-        display: none;
-        padding: 0;
-        width: 252px;
-    } 
-    
+  .div_close {
+    position: absolute;
+    display: block;
+  }
+  .menu-content {
+    position: fixed;
+    display: block;
+    padding: 0px;
+    padding-top: 15px;
+    margin: 0px;
+    top: 0;
+    height: 100%;
+    overflow-x: hidden;
+    background: #333333;
+    text-align: end;
+    width: 256px;
+    transform: translateX(0px);
+    z-index: 3;
+  }
 
+  .menu-content li {
+    display: flex;
+    width: 100%;
+    justify-content: right;
+    align-items: center;
+  }
+  .list-1 {
+    margin-top: 26px;
+  }
+  li a {
+    /* margin-top: 20px; */
+    display: flex;
+    height: 32px;
+    padding: 0px 20px 7px 0px;
+    align-items: center;
+  }
 
+  .menu-content li:hover {
+    background: #c4c4c4;
+    color: black;
+  }
 
+  .menu-content .div-li {
+    display: none;
+  }
 
-    .div_close {
-        display: none;
-    } 
+  /* .menu-content li {
+    display: flex;
+    width: 100%;
+    justify-content: right;
+    align-items: center;
+  } */
 
-    .div_close {
-        width: 100%;
-        display: flex;
-        justify-content: left;
-        margin-top: -15px;
+  li a {
+    display: flex;
+    height: 32px;
+    padding: 0px 20px 7px 0px;
+    align-items: center;
+  }
 
-    } 
+  /* .menu-content li:hover {
+    background: #c4c4c4;
+    color: black;
+  } */
 
-    .div_close img {
-        padding-left: 20px;
-        padding-bottom: 26px;
-        cursor: pointer;
-        background-color: #333333;
-    }
+  /* MAIN TABLET PORTRAIT*/
 
+  .sections {
+    flex-direction: column;
+    align-items: center;
+  }
 
-   
+  .transaction {
+    width: 90%;
+  }
 
-    .Open {
-        position: fixed;
-        height: 100vh;
-        background: #333333;
-        top: 0;
-        right: 0;
-        overflow-x: hidden;
-        display: flex;
-        transition: 0.5px;
-        flex-direction: column;
-        padding-top: 20px;
-        justify-content: flex-start;
-        z-index: 2;
-        
-    }
+  .extract {
+    padding: 2px;
+    width: 94%;
+  }
 
+  .transaction {
+    display: block;
+    flex-direction: row;
+  }
 
-    .menu-content {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        background: #333333;
-        padding: 0;
-    }
+  .field {
+    display: flex;
+  }
 
-    .menu-content .div-li {
-        display: none;
-    }
+  .title-transaction {
+    text-align: center;
+    padding-bottom: 21px;
+  }
 
-    .menu-content li {
-        display: flex;
-        width: 100%;
-        justify-content: right;
-        align-items: center;
-    }
+  .div-select {
+    width: 25%;
+  }
 
-   li a{
-       display: flex;
-       height: 32px;
-       padding: 0px 20px 7px 0px;
-       align-items: center;
+  .type-transaction {
+    padding-top: 20px;
+    white-space: nowrap;
+  }
 
-   }
+  .div-name {
+    width: 60%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
-    .menu-content li:hover {
-        background: #C4C4C4;
-        color: black;
-    }
+  .div-valor {
+    width: 35%;
+  }
 
+  .div-button {
+    text-align: end;
+  }
 
-    /* MAIN TABLET PORTRAIT*/
+  #inpt-select {
+    height: 36px;
+  }
 
-    .sections {
-        flex-direction: column;
-        align-items: center;
-    }
+  .inpt-name,
+  .inpt-valor {
+    width: 100%;
+  }
 
-    .transaction {
-        width: 90%;
-    }
+  a {
+    color: #fff;
+  }
 
-    .extract {
-        padding: 2px;
-        width: 94%;
-    }
+  a:hover {
+    color: #333333;
+  }
 
-    .transaction {
-        display: block;
-        flex-direction: row;
-    }
-
-    .field {
-        display: flex;
-    }
-
-    .title-transaction {
-        text-align: center;
-        padding-bottom: 21px;
-    }
-
-    .div-select {
-        width: 25%;
-    }
-
-    .type-transaction {
-        padding-top: 20px;
-        white-space: nowrap;
-    }
-
-    .div-name {
-        width: 60%;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .div-valor {
-        width: 35%;
-    }
-
-    .div-button {
-        text-align: end;
-
-    }
-
-    #inpt-select {
-        height: 36px;
-
-    }
-
-    .inpt-name,
-    .inpt-valor {
-        width: 100%;
-    }
-
-    a {
-        color: #fff;
-    }
-
-    a:hover {
-        color: #333333;
-    }
-
-    .button-add {
-        margin-top: 20px;
-        width: 35%;
-    }
+  .button-add {
+    margin-top: 20px;
+    width: 35%;
+  }
 }
