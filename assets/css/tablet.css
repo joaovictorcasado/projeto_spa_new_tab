@@ -193,9 +193,9 @@
     text-align: end;
   }
 
-  #inpt-select {
-    height: 39px;
-  }
+   #inpt-select {
+    height: 38px;
+  } 
 
   .inpt-name,
   .inpt-valor {
